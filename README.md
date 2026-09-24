@@ -2,7 +2,7 @@
 
 Eine Besprechungsaufnahme lokal in ein Protokoll mit Aufgaben, Verantwortlichen und Terminen verwandeln. Die Demo gehört zu **Local AI, Ausgabe 04**, dem deutschen LinkedIn-Newsletter von Christian Hubmann.
 
-Drei Bausteine, alle auf dem eigenen Rechner:
+Vier Schritte, alle auf dem eigenen Rechner:
 
 1. **Nemotron 3 Diarization** (NVIDIA, 23.09.2026) erkennt, wer wann spricht. Das Modell gibt keine Namen und keinen Text aus, sondern nur Sprecher 1, 2, 3 mit Zeitstempeln.
 2. **Qwen3-ASR 0.6B** schreibt jeden erkannten Abschnitt auf Deutsch mit.
@@ -29,7 +29,7 @@ lms server start
 lms load qwen/qwen3.8-27b
 ```
 
-Auf der Seite eine Demo-Besprechung wählen oder eine eigene Datei hineinziehen. Namen werden aus der Vorstellungsrunde übernommen oder von Hand eingetragen, dann „Protokoll lokal erstellen“.
+Auf der Seite eine Demo-Besprechung wählen oder eine eigene Datei hineinziehen. Namen werden aus der Vorstellungsrunde übernommen oder von Hand eingetragen, dann „Protokoll lokal erstellen“. Der Server lauscht nur auf 127.0.0.1; Aufnahmen, Transkripte und Protokolle bleiben im Ordner `jobs/`.
 
 ## Tipp: Vorstellungsrunde
 
@@ -40,7 +40,7 @@ Damit die Namen automatisch bei der richtigen Stimme landen, stellt sich zu Begi
 - „Hier ist Tobias Brandt vom Vertrieb.“
 - „Jonas Weber, Einkauf.“
 
-Ausgewertet wird nur die erste Minute. Nennt eine Stimmspur zwei verschiedene Namen, zeigt die Seite eine Warnung: Dann hat das Modell vermutlich zwei Personen zusammengelegt. Gleich klingende Nachnamen („Brand“ statt „Brandt“) gegenlesen oder buchstabieren. Im selben Moment lässt sich gut fragen, ob alle mit der Aufnahme einverstanden sind. Der Server lauscht nur auf 127.0.0.1; Aufnahmen, Transkripte und Protokolle bleiben im Ordner `jobs/`.
+Ausgewertet wird nur die erste Minute. Nennt eine Stimmspur zwei verschiedene Namen, zeigt die Seite eine Warnung: Dann hat das Modell vermutlich zwei Personen zusammengelegt. Gleich klingende Nachnamen („Brand“ statt „Brandt“) gegenlesen oder buchstabieren. Im selben Moment lässt sich gut fragen, ob alle mit der Aufnahme einverstanden sind.
 
 Ohne Oberfläche:
 
@@ -99,7 +99,7 @@ Das hier ist keine Rechtsberatung, aber drei Punkte gehören vor jeden echten Te
 
 - **Einwilligung:** Nichtöffentlich gesprochenes Wort ohne Befugnis aufzunehmen ist nach § 201 StGB strafbar. Alle Beteiligten müssen vorher zustimmen.
 - **Betriebsrat:** Eine Auswertung wie Redezeit pro Person ist objektiv geeignet, Verhalten oder Leistung zu überwachen. Nach § 87 Abs. 1 Nr. 6 BetrVG reicht diese Eignung für die Mitbestimmung. Die Oberfläche zeigt Redeanteile nur, weil die Demo mit fiktiven Stimmen arbeitet.
-- **Stimme als Merkmal:** Wer Personen anhand ihrer Stimme wiedererkennt, verarbeitet biometrische Daten. Diese Demo tut das nicht: Namen vergibt ein Mensch von Hand.
+- **Stimme als Merkmal:** Wer Personen anhand ihrer Stimme wiedererkennt, verarbeitet biometrische Daten. Diese Demo tut das nicht: Namen kommen aus dem, was eine Person in der Vorstellungsrunde selbst sagt, oder werden von Hand eingetragen. Ein Stimmprofil wird nicht gespeichert.
 
 ## Aufbau
 
