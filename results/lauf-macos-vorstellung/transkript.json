@@ -1,0 +1,268 @@
+{
+ "quelle": "besprechung-macos-vorstellung.wav",
+ "dauer_s": 120.36,
+ "sprecher": [
+  "speaker_0",
+  "speaker_1",
+  "speaker_2"
+ ],
+ "segmente": [
+  {
+   "speaker": "speaker_0",
+   "start": 0.46,
+   "end": 5.91,
+   "confidence": 0.985421,
+   "text": "Kurze Vorstellungsrunde für die Aufnahme: Ich bin Petra Lang, Produktionsleitung."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 6.34,
+   "end": 15.9,
+   "confidence": 0.827961,
+   "text": "Jonas Weber, Einhorn. Mein Name ist Miriam Koch. Ich bin für ein qualitatives Ständige. Und hier ist Obiast Radov Vertrieb."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 16.34,
+   "end": 24.16,
+   "confidence": 0.99512,
+   "text": "Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 24.58,
+   "end": 38.26,
+   "confidence": 0.929418,
+   "text": "Zubrina, der Staufer Diänes, kommt aus dem Donostayg, und sein Lieferant ist ein Abgesichert. Donostayg ist zu spät. Brenowalt hat sie zu Weichern und hat schon zu Weimall gerufen."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 38.71,
+   "end": 42.31,
+   "confidence": 0.888743,
+   "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen"
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 42.8,
+   "end": 45.81,
+   "confidence": 0.531553,
+   "text": "Ja, was ist? Ich freue mich, dass sie."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 46.64,
+   "end": 48.54,
+   "confidence": 0.500435,
+   "text": "Melt, which, this, which, which, which."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 47.89,
+   "end": 48.5,
+   "confidence": 0.659971,
+   "text": "Nein, das ist real."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 48.56,
+   "end": 48.87,
+   "confidence": 0.500111,
+   "text": "Rooth Redo."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 49.92,
+   "end": 51.34,
+   "confidence": 0.500636,
+   "text": "Jemand hier und stand."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 51.79,
+   "end": 60.2,
+   "confidence": 0.534528,
+   "text": "Moment, bewege an Rost, wohin der Not nicht obkubler Lifen kann, sage im Liberas mit, was ich ein Termin"
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 60.66,
+   "end": 63.85,
+   "confidence": 0.509714,
+   "text": "Gut, dann rufe ich Redo mit, was nicht mit Agen."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 64.29,
+   "end": 66.99,
+   "confidence": 0.987058,
+   "text": "Dann soll Reklamation seidel, Miriam."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 67.4,
+   "end": 74.09,
+   "confidence": 0.788653,
+   "text": "Base Waffen wird unterteilt in drei Bereiche: Cross, Ichremusar und Machine."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 73.28,
+   "end": 75.08,
+   "confidence": 0.986049,
+   "text": "Drei Teile, das ist viel."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 75.48,
+   "end": 80.11,
+   "confidence": 0.794098,
+   "text": "Each proof does work zoom motion through unshaped and proof readability tag."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 80.53,
+   "end": 82.95,
+   "confidence": 0.674064,
+   "text": "Soul ist schon als Zwergsuge bestellt."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 83.38,
+   "end": 86.48,
+   "confidence": 0.698009,
+   "text": "9. Notch neck ist nach der Prüfung."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 86.94,
+   "end": 91.51,
+   "confidence": 0.722591,
+   "text": "It scheint, Sidul Uthin Persüdition melding, dass Wordman signiert."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 91.93,
+   "end": 96.53,
+   "confidence": 0.969407,
+   "text": "Letzter Punkt: Die Messe Tobias, du wolltest die Standfläche buchen."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 96.97,
+   "end": 101.87,
+   "confidence": 0.676722,
+   "text": "Das Schaf ist dieswo schnick weg, kann das jemand tun? Ich mache das."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 100.58,
+   "end": 101.44,
+   "confidence": 0.966928,
+   "text": "Ich mache das."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 102.29,
+   "end": 106.31,
+   "confidence": 0.978975,
+   "text": "Nein, lass nur, Jonas. Ich buche die Fläche bis Freitag."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 106.71,
+   "end": 114.51,
+   "confidence": 0.829418,
+   "text": "Wer brouchet für die Messungen aus der Telosternuenseerie, die Stelisch bis zum 15. Oktober berichtet."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 115.03,
+   "end": 118.88,
+   "confidence": 0.97321,
+   "text": "Gut, dann sehen wir uns nächsten Montag. Danke euch."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 118.38,
+   "end": 119.55,
+   "confidence": 0.839391,
+   "text": "Tag, this mod tag."
+  }
+ ],
+ "statistik": {
+  "speaker_0": {
+   "beitraege": 9,
+   "sekunden": 34.7,
+   "woerter": 79
+  },
+  "speaker_1": {
+   "beitraege": 10,
+   "sekunden": 44.5,
+   "woerter": 107
+  },
+  "speaker_2": {
+   "beitraege": 7,
+   "sekunden": 32.8,
+   "woerter": 72
+  }
+ },
+ "vorstellung": {
+  "namen": {
+   "speaker_0": {
+    "name": "Petra Lang",
+    "rolle": "Produktionsleitung",
+    "zeit": 0.5,
+    "zitat": "Kurze Vorstellungsrunde für die Aufnahme: Ich bin Petra Lang, Produktionsleitung."
+   },
+   "speaker_1": {
+    "name": "Jonas Weber",
+    "rolle": "Einhorn",
+    "zeit": 6.3,
+    "zitat": "Jonas Weber, Einhorn."
+   }
+  },
+  "alle_treffer": {
+   "speaker_0": [
+    {
+     "name": "Petra Lang",
+     "rolle": "Produktionsleitung",
+     "zeit": 0.5,
+     "zitat": "Kurze Vorstellungsrunde für die Aufnahme: Ich bin Petra Lang, Produktionsleitung."
+    }
+   ],
+   "speaker_1": [
+    {
+     "name": "Jonas Weber",
+     "rolle": "Einhorn",
+     "zeit": 6.3,
+     "zitat": "Jonas Weber, Einhorn."
+    },
+    {
+     "name": "Miriam Koch",
+     "rolle": "",
+     "zeit": 6.3,
+     "zitat": "Mein Name ist Miriam Koch."
+    },
+    {
+     "name": "Obiast Radov",
+     "rolle": "Vertrieb",
+     "zeit": 6.3,
+     "zitat": "Und hier ist Obiast Radov Vertrieb."
+    }
+   ]
+  },
+  "warnungen": [
+   "Eine Stimmspur (speaker_1) nennt 3 Namen: Jonas Weber, Miriam Koch, Obiast Radov. Vermutlich wurden Stimmen zusammengelegt; diese Zuordnung bitte prüfen."
+  ]
+ },
+ "zeiten_s": {
+  "diarization_inkl_laden": 0.57,
+  "spracherkennung_inkl_laden": 15.22
+ },
+ "modelle": {
+  "diarization": "nvidia/Nemotron-3-Diarization (audio.cpp GGUF bf16)",
+  "asr": "Qwen3-ASR-0.6B (GGUF q8_0)",
+  "laufzeit": "audio.cpp 0.8.2, Metal"
+ }
+}

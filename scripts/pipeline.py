@@ -2,7 +2,9 @@
 
 1. Nemotron 3 Diarization (audio.cpp, Metal) findet, wer wann spricht.
 2. Qwen3-ASR 0.6B (audio.cpp) transkribiert jeden erkannten Abschnitt auf Deutsch.
-3. Optional: ein lokales Sprachmodell in LM Studio schreibt daraus das Protokoll
+3. Stellen sich alle zu Beginn vor („Ich bin Petra Lang, Produktionsleitung“), werden die Namen
+   aus dem Transkript gelesen und den Stimmen zugeordnet. Kein Stimmprofil, keine Biometrie.
+4. Optional: ein lokales Sprachmodell in LM Studio schreibt daraus das Protokoll
    mit Aufgaben, Verantwortlichen und Terminen, jeweils mit Beleg aus dem Transkript.
 
 Aufruf:
@@ -90,6 +92,65 @@ def transcribe(wav: Path, segments: list[dict]) -> None:
         seg["text"] = texts.get(i, "")
 
 
+INTRO_WINDOW_S = 60.0
+_NAME = r"([A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜ][a-zäöüß]+)?\s+(?:(?:von|van|de|zu)\s+)?[A-ZÄÖÜ][a-zäöüß]+(?:-[A-ZÄÖÜ][a-zäöüß]+)?)"
+# Auslöser ohne Rücksicht auf Groß-/Kleinschreibung, der Name selbst muss großgeschrieben sein.
+_INTRO_TRIGGER = re.compile(
+    r"\b(?i:ich bin|ich heiße|mein name ist|hier ist|hier spricht|am apparat ist)\s+" + _NAME + r"(.*)"
+)
+# „Jonas Weber, Einkauf.“ oder ohne Komma „Jonas Weber Einkauf“: nur als erster Satz des ersten
+# Beitrags einer Stimme, sonst läse sich „Zwölf Teile, das ist viel.“ wie ein Name.
+_INTRO_BARE = re.compile(r"^(?:[Uu]nd\s+)?" + _NAME + r"(?:[\s,]+(.*))?$")
+# Großgeschriebene Satzanfänge, die sonst wie ein Vorname aussehen („Zu Brenner, …“).
+_NOT_A_FIRST_NAME = {
+    "Zu", "Und", "Dann", "Gut", "Nein", "Ja", "Moment", "Bei", "Ich", "Wir", "Das", "Die", "Der", "Den",
+    "Letzter", "Soll", "Kurze", "Kann", "Guten", "Hallo", "Danke", "Bis", "Also", "Okay", "Sag", "Mit",
+}
+# Rollen statt Namen („Ich bin Teamleiterin Vertrieb“). Bewusst eine Wortliste statt Endungen,
+# damit Namen wie Dominik, Marion oder Jung nicht herausfallen.
+_ROLE_WORDS = {
+    "vertrieb", "einkauf", "qualität", "produktion", "buchhaltung", "marketing", "personal", "logistik",
+    "service", "technik", "controlling", "lager", "werkstatt", "entwicklung", "konstruktion", "versand",
+    "geschäftsführer", "geschäftsführerin", "geschäftsführung", "leitung", "leiter", "leiterin",
+}
+
+
+def _looks_like_role(name: str) -> bool:
+    return any(t.lower() in _ROLE_WORDS or t.lower().endswith(("leiter", "leiterin", "leitung")) for t in name.split())
+
+
+def detect_names(segments: list[dict]) -> dict:
+    """Namen aus einer Vorstellungsrunde am Anfang lesen („Ich bin Petra Lang, Produktionsleitung“).
+
+    Der Name stammt aus dem, was die Person selbst sagt, nicht aus einem Stimmprofil. Nennt eine
+    Stimmspur zwei verschiedene Namen, wurden vermutlich zwei Personen zusammengelegt.
+    """
+    found: dict[str, list[dict]] = {}
+    seen: set[str] = set()
+    for seg in segments:
+        if seg["start"] > INTRO_WINDOW_S:
+            break
+        first_turn = seg["speaker"] not in seen
+        seen.add(seg["speaker"])
+        sentences = [x.strip().strip("„“\"") for x in re.split(r"(?<=[.!?])\s+", seg["text"]) if x.strip()]
+        for i, sentence in enumerate(sentences):
+            m = _INTRO_TRIGGER.search(sentence) or (_INTRO_BARE.match(sentence) if first_turn and i == 0 else None)
+            if not m or m.group(1).split()[0] in _NOT_A_FIRST_NAME or _looks_like_role(m.group(1)):
+                continue
+            name = m.group(1)
+            role = re.sub(r"^[\s,]+|[\s.]+$", "", m.group(2) or "")[:60]
+            entries = found.setdefault(seg["speaker"], [])
+            if name not in {e["name"] for e in entries}:
+                entries.append({"name": name, "rolle": role, "zeit": round(seg["start"], 1), "zitat": sentence})
+    names = {sp: entries[0] for sp, entries in found.items()}
+    warnings = [
+        f"Eine Stimmspur ({sp}) nennt {len(e)} Namen: {', '.join(x['name'] for x in e)}. "
+        "Vermutlich wurden Stimmen zusammengelegt; diese Zuordnung bitte prüfen."
+        for sp, e in found.items() if len(e) > 1
+    ]
+    return {"namen": names, "alle_treffer": found, "warnungen": warnings}
+
+
 def run(audio: Path, out_dir: Path) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     wav = out_dir / "audio.wav"
@@ -121,6 +182,7 @@ def run(audio: Path, out_dir: Path) -> dict:
         "sprecher": speakers,
         "segmente": [{**s, "start": round(s["start"], 2), "end": round(s["end"], 2)} for s in segments],
         "statistik": stats,
+        "vorstellung": detect_names(segments),
         "zeiten_s": {
             "diarization_inkl_laden": round(t1 - t0, 2),
             "spracherkennung_inkl_laden": round(t2 - t1, 2),
@@ -193,7 +255,10 @@ def main() -> None:
     args = ap.parse_args()
 
     result = run(args.audio, args.out)
-    names = json.loads(args.names)
+    names = {sp: v["name"] for sp, v in result["vorstellung"]["namen"].items()}
+    names.update(json.loads(args.names))
+    for w in result["vorstellung"]["warnungen"]:
+        print("WARNUNG:", w)
     print(transcript_text(result, names))
     print(json.dumps(result["zeiten_s"]))
     if args.protocol:

@@ -1,0 +1,64 @@
+{
+ "modell": "qwen/qwen3.8-27b",
+ "sekunden": 23.1,
+ "roh": "{\n  \"themen\": [\n    \"Lieferverzug bei Brenner\",\n    \"Reklamation von Seidel\",\n    \"Messe in Stuttgart\"\n  ],\n  \"aufgaben\": [\n    {\n      \"wer\": \"Jonas Weber\",\n      \"was\": \"Bei Kübler anfragen und sich bis Mittwochmittag melden\",\n      \"bis\": \"Mittwochmittag\",\n      \"beleg\": \"Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag.\",\n      \"zeit\": \"00:35.9\"\n    },\n    {\n      \"wer\": \"Tobias Brand\",\n      \"was\": \"Brenner am Mittwoch Nachmittag anrufen\",\n      \"bis\": \"Mittwoch Nachmittag\",\n      \"beleg\": \"Gut, dann rufe ich Brenner am Mittwoch Nachmittag an.\",\n      \"zeit\": \"00:50.3\"\n    },\n    {\n      \"wer\": \"Miriam Koch\",\n      \"was\": \"Werkzeug prüfen und Prüfbericht schreiben\",\n      \"bis\": \"Freitag\",\n      \"beleg\": \"Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag.\",\n      \"zeit\": \"01:02.3\"\n    },\n    {\n      \"wer\": \"Tobias Brand\",\n      \"was\": \"Seidel eine kurze Zwischenmeldung schreiben\",\n      \"bis\": \"heute\",\n      \"beleg\": \"Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind.\",\n      \"zeit\": \"01:12.0\"\n    },\n    {\n      \"wer\": \"Jonas Weber\",\n      \"was\": \"Standfläche für die Messe buchen\",\n      \"bis\": \"Freitag\",\n      \"beleg\": \"Nein, lass nur Jonas. Ich buche die Fläche bis Freitag.\",\n      \"zeit\": \"01:24.1\"\n    },\n    {\n      \"wer\": \"Miriam Koch\",\n      \"was\": \"Zwei Musterteile aus der neuen Serie bereitstellen\",\n      \"bis\": \"15. Oktober\",\n      \"beleg\": \"Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie, die stelle ich bis zum fünfzehnten Oktober bereit.\",\n      \"zeit\": \"01:27.9\"\n    }\n  ],\n  \"offene_fragen\": []\n}",
+ "protokoll": {
+  "themen": [
+   "Lieferverzug bei Brenner",
+   "Reklamation von Seidel",
+   "Messe in Stuttgart"
+  ],
+  "aufgaben": [
+   {
+    "wer": "Jonas Weber",
+    "was": "Bei Kübler anfragen und sich bis Mittwochmittag melden",
+    "bis": "Mittwochmittag",
+    "beleg": "Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag.",
+    "zeit": "00:35.9"
+   },
+   {
+    "wer": "Tobias Brand",
+    "was": "Brenner am Mittwoch Nachmittag anrufen",
+    "bis": "Mittwoch Nachmittag",
+    "beleg": "Gut, dann rufe ich Brenner am Mittwoch Nachmittag an.",
+    "zeit": "00:50.3"
+   },
+   {
+    "wer": "Miriam Koch",
+    "was": "Werkzeug prüfen und Prüfbericht schreiben",
+    "bis": "Freitag",
+    "beleg": "Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag.",
+    "zeit": "01:02.3"
+   },
+   {
+    "wer": "Tobias Brand",
+    "was": "Seidel eine kurze Zwischenmeldung schreiben",
+    "bis": "heute",
+    "beleg": "Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind.",
+    "zeit": "01:12.0"
+   },
+   {
+    "wer": "Jonas Weber",
+    "was": "Standfläche für die Messe buchen",
+    "bis": "Freitag",
+    "beleg": "Nein, lass nur Jonas. Ich buche die Fläche bis Freitag.",
+    "zeit": "01:24.1"
+   },
+   {
+    "wer": "Miriam Koch",
+    "was": "Zwei Musterteile aus der neuen Serie bereitstellen",
+    "bis": "15. Oktober",
+    "beleg": "Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie, die stelle ich bis zum fünfzehnten Oktober bereit.",
+    "zeit": "01:27.9"
+   }
+  ],
+  "offene_fragen": []
+ },
+ "eingabe": "[00:00.5] Petra Lang: Kurze Vorstellungsrunde für die Aufnahme. Ich bin Petra Lang, Produktionsleitung.\n[00:05.5] Jonas Weber: Jonas Weber Einkauf\n[00:07.0] Miriam Koch: Mein Name ist Miriam Koch. Ich bin für die Qualität zuständig.\n[00:10.9] Tobias Brand: Und hier ist Tobias Brand vom Vertrieb.\n[00:13.1] Petra Lang: Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart.\n[00:21.1] Jonas Weber: Zu Brenner, der Stahl für die Einsätze kommt erst am Donnerstag. Unser Lieferant hat gestern abgesagt.\n[00:27.6] Tobias Brand: Donnerstag ist zu spät. Brenner wartet seit zwei Wochen und hat schon zweimal angerufen.\n[00:32.8] Petra Lang: Jonas, kannst du bei einem zweiten Lieferanten anfragen\n[00:35.9] Jonas Weber: Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag.\n[00:39.6] Tobias Brand: Und ich rufe Brenner heute an und sage ihm den neuen Stand.\n[00:42.6] Miriam Koch: Moment, bevor du anruft, wir wissen noch nicht, ob Kübler liefern kann. Sag ihm lieber erst Mittwoch einen Termin.\n[00:50.3] Tobias Brand: Gut, dann rufe ich Brenner am Mittwoch Nachmittag an.\n[00:53.1] Petra Lang: Dann zur Reklamationseidel Miriam.\n[00:55.4] Miriam Koch: Bei zwölf von zweihundert Teilen ist die Bohrung zu groß. Ich vermute, das Werkzeug an Maschinen hier.\n[01:00.7] Petra Lang: 10 Teile, das ist viel.\n[01:02.3] Miriam Koch: Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag.\n[01:07.3] Jonas Weber: Soll ich schon Ersatzwerkzeug bestellen\n[01:09.3] Miriam Koch: Nein, noch nicht, erst nach Prüfung.\n[01:12.0] Tobias Brand: Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind.\n[01:16.0] Petra Lang: Letzter Punkt: Die Messe. Tobias, du wolltest die Standfläche buchen.\n[01:20.3] Tobias Brand: Das schaffe ich diese Woche nicht mehr. Kann das jemand übernehmen?\n[01:22.9] Petra Lang: Ich mache das.\n[01:23.1] Jonas Weber: Ich kann auch.\n[01:24.1] Petra Lang: Nein, lass nur Jonas. Ich buche die Fläche bis Freitag.\n[01:27.9] Miriam Koch: Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie, die stelle ich bis zum fünfzehnten Oktober bereit.\n[01:35.6] Petra Lang: Gut, dann sehen wir uns nächsten Montag. Danke euch.\n[01:38.2] Jonas Weber: Danke\n[01:38.4] Tobias Brand: Danke fürs Montag.",
+ "namen": {
+  "speaker_0": "Petra Lang",
+  "speaker_1": "Jonas Weber",
+  "speaker_2": "Miriam Koch",
+  "speaker_3": "Tobias Brand"
+ }
+}

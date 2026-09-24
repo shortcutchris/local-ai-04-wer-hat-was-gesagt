@@ -52,6 +52,12 @@
              vertical-align: -1px; margin-right: 6px; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  .tip { margin-top: 12px; font-size: 14px; background: #eaf7ff; border-left: 4px solid var(--blue);
+         border-radius: 6px; padding: 10px 12px; }
+  .warn { margin: 0 0 12px; font-size: 14px; background: #fff0f0; border-left: 4px solid var(--red);
+          border-radius: 6px; padding: 10px 12px; font-weight: 600; }
+  .intro { font-size: 13px; color: var(--muted); margin: 4px 0 10px; }
+  .intro li { margin: 2px 0; }
   .hidden { display: none !important; }
 
   audio { width: 100%; margin-bottom: 12px; }
@@ -112,14 +118,20 @@
       </div>
     </div>
     <div class="status" id="status" role="status" aria-live="polite"></div>
+    <div class="tip"><b>Tipp für eigene Aufnahmen:</b> Mit einer kurzen Vorstellungsrunde beginnen. Jede Person sagt
+      Vor- und Nachnamen und Funktion, zum Beispiel: <i>„Ich bin Petra Lang, Produktionsleitung.“</i>
+      Dann trägt die Demo die Namen automatisch bei der richtigen Stimme ein. Erkannt werden auch
+      <i>„Mein Name ist …“</i>, <i>„Hier ist …“</i> und <i>„Jonas Weber, Einkauf.“</i> Vorher alle fragen, ob aufgezeichnet werden darf.</div>
     <p class="note" id="hinweis"></p>
   </section>
 
   <section class="card hidden" id="result" aria-labelledby="h-timeline">
     <h2 id="h-timeline"><span class="step">2</span>Wer spricht wann · Namen vergeben</h2>
+    <div id="warnings"></div>
     <audio id="player" controls preload="auto"></audio>
     <div class="timeline" id="timeline"></div>
     <div class="axis"><div></div><div id="axis"></div></div>
+    <ul class="intro" id="intro"></ul>
     <div class="times" id="times"></div>
   </section>
 
@@ -159,9 +171,11 @@
 
 <script>
 const DEMO_LABELS = {
+  "supertonic-vorstellung": "Demo: mit Vorstellungsrunde",
   "supertonic": "Demo: vier klare Stimmen",
   "supertonic-aehnlich": "Demo: ähnliche Stimmen",
   "macos": "Demo: macOS-Stimmen (Stresstest)",
+  "macos-vorstellung": "Demo: Stresstest mit Vorstellung",
 };
 const $ = (id) => document.getElementById(id);
 let data = null;
@@ -208,6 +222,7 @@ async function analyze({ demo, file }) {
     if (!r.ok) throw new Error(j.fehler || r.statusText);
     data = j;
     for (const k of Object.keys(names)) delete names[k];
+    for (const [sp, v] of Object.entries(j.vorstellung?.namen || {})) names[sp] = v.name;
     setStatus($("status"), `Fertig nach ${((performance.now() - t0) / 1000).toFixed(1)} s: ${j.sprecher.length} Stimmen, ${j.segmente.length} Abschnitte, ${stamp(j.dauer_s)} Audio.`);
     render();
   } catch (e) {
@@ -226,7 +241,8 @@ function render() {
   const tl = $("timeline");
   tl.replaceChildren();
   for (const sp of data.sprecher) {
-    const input = el("input", { value: "", placeholder: nameOf(sp), ariaLabel: `Name für ${nameOf(sp)}` });
+    const label = `Sprecher ${parseInt(sp.split("_").pop(), 10) + 1}`;
+    const input = el("input", { value: names[sp] || "", placeholder: label, ariaLabel: `Name für ${label}` });
     input.style.setProperty("--c", color(sp));
     input.oninput = () => { names[sp] = input.value.trim(); refreshNames(); };
     const track = el("div", { className: "track" });
@@ -246,6 +262,13 @@ function render() {
     track.append(el("div", { className: "playhead" }));
     tl.append(el("div", { className: "lane" }, input, track));
   }
+  const vs = data.vorstellung || { namen: {}, warnungen: [] };
+  $("warnings").replaceChildren(...vs.warnungen.map((w) => el("p", { className: "warn", textContent: `⚠ ${w}` })));
+  const found = Object.entries(vs.namen);
+  $("intro").replaceChildren(...(found.length
+    ? found.map(([sp, v]) => el("li", {}, `Aus der Vorstellungsrunde: `, el("b", { textContent: v.name }),
+        v.rolle ? ` (${v.rolle})` : "", ` · ${stamp(v.zeit)} · „${v.zitat}“`))
+    : [el("li", { textContent: "Keine Vorstellungsrunde erkannt. Namen bitte oben von Hand eintragen." })]));
   const ax = $("axis");
   ax.replaceChildren(...[0, 0.25, 0.5, 0.75, 1].map((f) => el("span", { textContent: stamp(f * data.dauer_s) })));
 

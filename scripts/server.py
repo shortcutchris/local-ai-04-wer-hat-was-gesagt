@@ -27,9 +27,11 @@ JOBS = ROOT / "jobs"
 FIXTURES = ROOT / "fixtures"
 MAX_UPLOAD = 500 * 1024 * 1024
 DEMOS = {
+    "supertonic-vorstellung": "besprechung-supertonic-vorstellung.wav",
     "supertonic": "besprechung-supertonic.wav",
     "supertonic-aehnlich": "besprechung-supertonic-aehnlich.wav",
     "macos": "besprechung-macos.wav",
+    "macos-vorstellung": "besprechung-macos-vorstellung.wav",
 }
 
 

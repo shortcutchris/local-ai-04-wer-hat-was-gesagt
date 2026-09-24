@@ -1,0 +1,302 @@
+{
+ "quelle": "besprechung-supertonic-vorstellung.wav",
+ "dauer_s": 99.87,
+ "sprecher": [
+  "speaker_0",
+  "speaker_1",
+  "speaker_2",
+  "speaker_3"
+ ],
+ "segmente": [
+  {
+   "speaker": "speaker_0",
+   "start": 0.45,
+   "end": 5.14,
+   "confidence": 0.989538,
+   "text": "Kurze Vorstellungsrunde für die Aufnahme. Ich bin Petra Lang, Produktionsleitung."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 5.55,
+   "end": 6.57,
+   "confidence": 0.879188,
+   "text": "Jonas Weber Einkauf"
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 6.99,
+   "end": 10.53,
+   "confidence": 0.969906,
+   "text": "Mein Name ist Miriam Koch. Ich bin für die Qualität zuständig."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 10.92,
+   "end": 12.71,
+   "confidence": 0.954612,
+   "text": "Und hier ist Tobias Brand vom Vertrieb."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 13.1,
+   "end": 20.76,
+   "confidence": 0.981453,
+   "text": "Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 21.15,
+   "end": 27.26,
+   "confidence": 0.986266,
+   "text": "Zu Brenner, der Stahl für die Einsätze kommt erst am Donnerstag. Unser Lieferant hat gestern abgesagt."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 27.65,
+   "end": 32.39,
+   "confidence": 0.990346,
+   "text": "Donnerstag ist zu spät. Brenner wartet seit zwei Wochen und hat schon zweimal angerufen."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 32.79,
+   "end": 35.49,
+   "confidence": 0.990344,
+   "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen"
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 35.89,
+   "end": 40.31,
+   "confidence": 0.965026,
+   "text": "Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 39.6,
+   "end": 42.28,
+   "confidence": 0.987991,
+   "text": "Und ich rufe Brenner heute an und sage ihm den neuen Stand."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 42.65,
+   "end": 49.92,
+   "confidence": 0.969951,
+   "text": "Moment, bevor du anruft, wir wissen noch nicht, ob Kübler liefern kann. Sag ihm lieber erst Mittwoch einen Termin."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 50.32,
+   "end": 52.7,
+   "confidence": 0.985039,
+   "text": "Gut, dann rufe ich Brenner am Mittwoch Nachmittag an."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 53.1,
+   "end": 55.02,
+   "confidence": 0.94294,
+   "text": "Dann zur Reklamationseidel Miriam."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 55.43,
+   "end": 61.5,
+   "confidence": 0.981488,
+   "text": "Bei zwölf von zweihundert Teilen ist die Bohrung zu groß. Ich vermute, das Werkzeug an Maschinen hier."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 60.7,
+   "end": 61.93,
+   "confidence": 0.975457,
+   "text": "10 Teile, das ist viel."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 62.34,
+   "end": 66.88,
+   "confidence": 0.990969,
+   "text": "Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 67.27,
+   "end": 68.89,
+   "confidence": 0.985726,
+   "text": "Soll ich schon Ersatzwerkzeug bestellen"
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 69.29,
+   "end": 71.55,
+   "confidence": 0.966332,
+   "text": "Nein, noch nicht, erst nach Prüfung."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 71.96,
+   "end": 75.65,
+   "confidence": 0.995614,
+   "text": "Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 76.03,
+   "end": 79.91,
+   "confidence": 0.972251,
+   "text": "Letzter Punkt: Die Messe. Tobias, du wolltest die Standfläche buchen."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 80.31,
+   "end": 83.36,
+   "confidence": 0.970823,
+   "text": "Das schaffe ich diese Woche nicht mehr. Kann das jemand übernehmen?"
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 82.87,
+   "end": 83.48,
+   "confidence": 0.945741,
+   "text": "Ich mache das."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 83.13,
+   "end": 83.68,
+   "confidence": 0.954133,
+   "text": "Ich kann auch."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 84.08,
+   "end": 87.51,
+   "confidence": 0.97997,
+   "text": "Nein, lass nur Jonas. Ich buche die Fläche bis Freitag."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 87.91,
+   "end": 95.19,
+   "confidence": 0.991539,
+   "text": "Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie, die stelle ich bis zum fünfzehnten Oktober bereit."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 95.57,
+   "end": 98.49,
+   "confidence": 0.905295,
+   "text": "Gut, dann sehen wir uns nächsten Montag. Danke euch."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 98.15,
+   "end": 98.56,
+   "confidence": 0.933629,
+   "text": "Danke"
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 98.38,
+   "end": 99.11,
+   "confidence": 0.955303,
+   "text": "Danke fürs Montag."
+  }
+ ],
+ "statistik": {
+  "speaker_0": {
+   "beitraege": 9,
+   "sekunden": 29.0,
+   "woerter": 78
+  },
+  "speaker_1": {
+   "beitraege": 6,
+   "sekunden": 14.1,
+   "woerter": 43
+  },
+  "speaker_2": {
+   "beitraege": 6,
+   "sekunden": 31.0,
+   "woerter": 85
+  },
+  "speaker_3": {
+   "beitraege": 7,
+   "sekunden": 19.1,
+   "woerter": 67
+  }
+ },
+ "vorstellung": {
+  "namen": {
+   "speaker_0": {
+    "name": "Petra Lang",
+    "rolle": "Produktionsleitung",
+    "zeit": 0.5,
+    "zitat": "Ich bin Petra Lang, Produktionsleitung."
+   },
+   "speaker_1": {
+    "name": "Jonas Weber",
+    "rolle": "Einkauf",
+    "zeit": 5.5,
+    "zitat": "Jonas Weber Einkauf"
+   },
+   "speaker_2": {
+    "name": "Miriam Koch",
+    "rolle": "",
+    "zeit": 7.0,
+    "zitat": "Mein Name ist Miriam Koch."
+   },
+   "speaker_3": {
+    "name": "Tobias Brand",
+    "rolle": "vom Vertrieb",
+    "zeit": 10.9,
+    "zitat": "Und hier ist Tobias Brand vom Vertrieb."
+   }
+  },
+  "alle_treffer": {
+   "speaker_0": [
+    {
+     "name": "Petra Lang",
+     "rolle": "Produktionsleitung",
+     "zeit": 0.5,
+     "zitat": "Ich bin Petra Lang, Produktionsleitung."
+    }
+   ],
+   "speaker_1": [
+    {
+     "name": "Jonas Weber",
+     "rolle": "Einkauf",
+     "zeit": 5.5,
+     "zitat": "Jonas Weber Einkauf"
+    }
+   ],
+   "speaker_2": [
+    {
+     "name": "Miriam Koch",
+     "rolle": "",
+     "zeit": 7.0,
+     "zitat": "Mein Name ist Miriam Koch."
+    }
+   ],
+   "speaker_3": [
+    {
+     "name": "Tobias Brand",
+     "rolle": "vom Vertrieb",
+     "zeit": 10.9,
+     "zitat": "Und hier ist Tobias Brand vom Vertrieb."
+    }
+   ]
+  },
+  "warnungen": []
+ },
+ "zeiten_s": {
+  "diarization_inkl_laden": 0.57,
+  "spracherkennung_inkl_laden": 13.75
+ },
+ "modelle": {
+  "diarization": "nvidia/Nemotron-3-Diarization (audio.cpp GGUF bf16)",
+  "asr": "Qwen3-ASR-0.6B (GGUF q8_0)",
+  "laufzeit": "audio.cpp 0.8.2, Metal"
+ }
+}

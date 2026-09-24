@@ -207,5 +207,10 @@
   "diarization": "nvidia/Nemotron-3-Diarization (audio.cpp GGUF bf16)",
   "asr": "Qwen3-ASR-0.6B (GGUF q8_0)",
   "laufzeit": "audio.cpp 0.8.2, Metal"
+ },
+ "vorstellung": {
+  "namen": {},
+  "alle_treffer": {},
+  "warnungen": []
  }
 }

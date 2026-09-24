@@ -232,5 +232,23 @@
   ],
   "keine_aufgabe_stichworte": [
     "ersatzwerkzeug"
+  ],
+  "vorstellungsrunde": [
+    {
+      "sprecher": "petra",
+      "text": "Kurze Vorstellungsrunde für die Aufnahme. Ich bin Petra Lang, Produktionsleitung."
+    },
+    {
+      "sprecher": "jonas",
+      "text": "Jonas Weber, Einkauf."
+    },
+    {
+      "sprecher": "miriam",
+      "text": "Mein Name ist Miriam Koch, ich bin für die Qualität zuständig."
+    },
+    {
+      "sprecher": "tobias",
+      "text": "Und hier ist Tobias Brandt vom Vertrieb."
+    }
   ]
 }

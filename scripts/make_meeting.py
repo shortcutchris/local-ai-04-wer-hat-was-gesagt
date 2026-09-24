@@ -11,7 +11,10 @@ Zwei Stimmsätze, beide synthetisch:
   supertonic  Supertonic 3 über audio.cpp, neuronale Stimmen F1, M2, F3, M4
   supertonic_aehnlich  dieselbe Synthese mit den benachbarten Stimmen F1, M1, F2, M2
 
-Aufruf:  uv run --with numpy python scripts/make_meeting.py --engine macos|supertonic|supertonic_aehnlich
+Mit --vorstellung stellen sich zu Beginn alle vier mit Vor- und Nachnamen vor (vier verschiedene
+Formulierungen), damit die Namenszuordnung aus der Vorstellungsrunde getestet werden kann.
+
+Aufruf:  uv run --with numpy python scripts/make_meeting.py --engine macos|supertonic|supertonic_aehnlich [--vorstellung]
 """
 
 import argparse
@@ -65,9 +68,14 @@ def trim(pcm: np.ndarray) -> np.ndarray:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--engine", choices=["macos", "supertonic", "supertonic_aehnlich"], required=True)
-    engine = ap.parse_args().engine
-    name = f"besprechung-{engine.replace('_', '-')}"
+    ap.add_argument("--vorstellung", action="store_true")
+    args = ap.parse_args()
+    engine = args.engine
+    name = f"besprechung-{engine.replace('_', '-')}" + ("-vorstellung" if args.vorstellung else "")
     spec = json.loads((FIXTURES / "besprechung.json").read_text())
+    if args.vorstellung:
+        intro = [{"id": f"v{i + 1}", **v} for i, v in enumerate(spec["vorstellungsrunde"])]
+        spec["beitraege"] = intro + spec["beitraege"]
     speakers = spec["sprecher"]
     gap = spec["abstand_standard_s"]
 
