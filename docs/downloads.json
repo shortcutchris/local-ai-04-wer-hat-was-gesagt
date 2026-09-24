@@ -1,0 +1,32 @@
+{
+  "audio_cpp": {
+    "version": "v0.8.2",
+    "url": "https://github.com/0xShug0/audio.cpp/releases/download/v0.8.2/audio-v0.8.2-bin-macos-arm64-metal.tar.gz",
+    "sha256": "d33db13695fbf3ba73ea85a8b59575b98a66f7b6ff89bbb59599c75b4689f9a5",
+    "lizenz": "Apache-2.0"
+  },
+  "modelle": [
+    {
+      "zweck": "Diarization: wer spricht wann",
+      "path": "Nemotron-3-Diarization-GGUF/nemotron-3-diarization-bf16.gguf",
+      "url": "https://huggingface.co/audio-cpp/Nemotron-3-Diarization-GGUF/resolve/main/nemotron-3-diarization-bf16.gguf",
+      "sha256": "0fb4ac0d092023f2def08de02476f8bcf94c7c5377e81ea4245da7b1f4879572",
+      "lizenz": "OpenMDW-1.1 (nvidia/Nemotron-3-Diarization)"
+    },
+    {
+      "zweck": "Deutsche Spracherkennung",
+      "path": "Qwen3-ASR-0.6B-GGUF/qwen3-asr-0.6b-q8_0.gguf",
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf/resolve/7673747ca11840efe52a2ce4631866a74debb363/Qwen3-ASR-0.6B-GGUF/qwen3-asr-0.6b-q8_0.gguf",
+      "sha256": "6c44ec2fb4cee513892d7863c1fcc3ea6b699ffa4d899b0ef4ab19956d9544f7",
+      "lizenz": "Apache-2.0"
+    },
+    {
+      "zweck": "Nur zum Neuerzeugen der Testbesprechung (optional)",
+      "optional": true,
+      "path": "Supertonic-3-GGUF/supertonic-3-orig.gguf",
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf/resolve/7673747ca11840efe52a2ce4631866a74debb363/Supertonic-3-GGUF/supertonic-3-orig.gguf",
+      "sha256": "af814486a0bc9513fb36afabd9b1155ad14fb2c36a107ac6ffe62ea9adafb662",
+      "lizenz": "siehe Modellkarte Supertone/supertonic"
+    }
+  ]
+}

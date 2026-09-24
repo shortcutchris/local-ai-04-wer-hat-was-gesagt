@@ -1,0 +1,181 @@
+{
+ "turns": "results/diar-supertonic-aehnlich/turns.json",
+ "collar_s": 0.0,
+ "zuordnung_modell_zu_person": {
+  "speaker_0": "petra",
+  "speaker_1": "jonas",
+  "speaker_2": "tobias",
+  "speaker_3": "miriam"
+ },
+ "modell_sprecher": 4,
+ "soll_sprecher": 4,
+ "gesamt": {
+  "der": 0.0226503514709711,
+  "verpasst": 0.006508721687060661,
+  "fehlalarm": 0.01614162978391044,
+  "verwechslung": 0.0,
+  "soll_sekunden": 76.82000000000001
+ },
+ "nur_ueberlappung": {
+  "der": 0.04219409282700422,
+  "verpasst": 0.029535864978902954,
+  "fehlalarm": 0.012658227848101266,
+  "verwechslung": 0.0,
+  "soll_sekunden": 4.74
+ },
+ "ohne_ueberlappung": {
+  "der": 0.021365149833518313,
+  "verpasst": 0.004994450610432853,
+  "fehlalarm": 0.016370699223085462,
+  "verwechslung": 0.0,
+  "soll_sekunden": 72.08
+ },
+ "beitraege_richtig": 24,
+ "beitraege_gesamt": 24,
+ "beitraege": [
+  {
+   "id": 1,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 2,
+   "soll": "jonas",
+   "erkannt": "jonas",
+   "richtig": true
+  },
+  {
+   "id": 3,
+   "soll": "tobias",
+   "erkannt": "tobias",
+   "richtig": true
+  },
+  {
+   "id": 4,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 5,
+   "soll": "jonas",
+   "erkannt": "jonas",
+   "richtig": true
+  },
+  {
+   "id": 6,
+   "soll": "tobias",
+   "erkannt": "tobias",
+   "richtig": true
+  },
+  {
+   "id": 7,
+   "soll": "miriam",
+   "erkannt": "miriam",
+   "richtig": true
+  },
+  {
+   "id": 8,
+   "soll": "tobias",
+   "erkannt": "tobias",
+   "richtig": true
+  },
+  {
+   "id": 9,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 10,
+   "soll": "miriam",
+   "erkannt": "miriam",
+   "richtig": true
+  },
+  {
+   "id": 11,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 12,
+   "soll": "miriam",
+   "erkannt": "miriam",
+   "richtig": true
+  },
+  {
+   "id": 13,
+   "soll": "jonas",
+   "erkannt": "jonas",
+   "richtig": true
+  },
+  {
+   "id": 14,
+   "soll": "miriam",
+   "erkannt": "miriam",
+   "richtig": true
+  },
+  {
+   "id": 15,
+   "soll": "tobias",
+   "erkannt": "tobias",
+   "richtig": true
+  },
+  {
+   "id": 16,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 17,
+   "soll": "tobias",
+   "erkannt": "tobias",
+   "richtig": true
+  },
+  {
+   "id": 18,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 19,
+   "soll": "jonas",
+   "erkannt": "jonas",
+   "richtig": true
+  },
+  {
+   "id": 20,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 21,
+   "soll": "miriam",
+   "erkannt": "miriam",
+   "richtig": true
+  },
+  {
+   "id": 22,
+   "soll": "petra",
+   "erkannt": "petra",
+   "richtig": true
+  },
+  {
+   "id": 23,
+   "soll": "jonas",
+   "erkannt": "jonas",
+   "richtig": true
+  },
+  {
+   "id": 24,
+   "soll": "tobias",
+   "erkannt": "tobias",
+   "richtig": true
+  }
+ ]
+}

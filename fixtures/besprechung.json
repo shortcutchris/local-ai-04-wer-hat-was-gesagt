@@ -6,25 +6,29 @@
       "name": "Petra Lang",
       "rolle": "Produktionsleitung",
       "stimme_macos": "Anna",
-      "stimme_supertonic": "F1"
+      "stimme_supertonic": "F1",
+      "stimme_supertonic_aehnlich": "F1"
     },
     "jonas": {
       "name": "Jonas Weber",
       "rolle": "Einkauf",
       "stimme_macos": "Reed",
-      "stimme_supertonic": "M2"
+      "stimme_supertonic": "M2",
+      "stimme_supertonic_aehnlich": "M1"
     },
     "miriam": {
       "name": "Miriam Koch",
       "rolle": "Qualität",
       "stimme_macos": "Shelley",
-      "stimme_supertonic": "F3"
+      "stimme_supertonic": "F3",
+      "stimme_supertonic_aehnlich": "F2"
     },
     "tobias": {
       "name": "Tobias Brandt",
       "rolle": "Vertrieb",
       "stimme_macos": "Eddy",
-      "stimme_supertonic": "M4"
+      "stimme_supertonic": "M4",
+      "stimme_supertonic_aehnlich": "M2"
     }
   },
   "abstand_standard_s": 0.45,

@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wer hat was gesagt?</title>
+<style>
+  :root {
+    --navy: #000e22;
+    --paper: #f4efe6;
+    --card: #fffdf8;
+    --ink: #1e1e1e;
+    --muted: #6b6559;
+    --line: #ddd4c4;
+    --blue: #00aaff;
+    --red: #ff3131;
+    --radius: 10px;
+    --s0: #0b6bcb; --s1: #d9480f; --s2: #2b8a3e; --s3: #9c36b5;
+    --s4: #c2255c; --s5: #0c8599; --s6: #5c940d; --s7: #e67700;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+  header { background: var(--navy); color: #fff; padding: 22px 16px 20px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  header .wrap { padding: 0; }
+  .badge { display: inline-flex; gap: 6px; align-items: baseline; background: #fff; color: var(--ink);
+           border-radius: 6px; padding: 2px 8px; font-weight: 800; font-size: 13px; letter-spacing: .02em; }
+  .badge b { color: var(--red); }
+  h1 { font: 800 clamp(28px, 5vw, 44px)/1.05 "Avenir Next Condensed", "Helvetica Neue", Arial, sans-serif;
+       text-transform: uppercase; letter-spacing: .01em; margin: 12px 0 6px; }
+  header p { margin: 0; color: #c9d6e8; max-width: 70ch; }
+  header p strong { color: var(--blue); font-weight: 600; }
+  main { padding: 20px 0 48px; }
+  section.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+                 padding: 18px; margin-bottom: 16px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 12px; }
+  h2 .step { color: var(--red); font-weight: 800; margin-right: 6px; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  button { font: inherit; font-weight: 600; border-radius: 8px; border: 1px solid var(--navy);
+           background: var(--navy); color: #fff; padding: 8px 14px; cursor: pointer; }
+  button.ghost { background: transparent; color: var(--navy); }
+  button:disabled { opacity: .45; cursor: wait; }
+  button:focus-visible, input:focus-visible, .drop:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .drop { flex: 1 1 260px; border: 2px dashed var(--line); border-radius: var(--radius); padding: 14px;
+          text-align: center; color: var(--muted); cursor: pointer; }
+  .drop.over { border-color: var(--blue); background: #eaf7ff; }
+  .status { margin-top: 12px; min-height: 22px; color: var(--muted); }
+  .status.error { color: var(--red); font-weight: 600; }
+  .spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line);
+             border-top-color: var(--red); border-radius: 50%; animation: spin .8s linear infinite;
+             vertical-align: -1px; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  .hidden { display: none !important; }
+
+  audio { width: 100%; margin-bottom: 12px; }
+  .timeline { position: relative; }
+  .lane { display: grid; grid-template-columns: 170px 1fr; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .lane input { width: 100%; font: inherit; font-weight: 600; border: 1px solid var(--line); border-radius: 6px;
+                padding: 4px 8px; border-left: 6px solid var(--c); background: #fff; }
+  .track { position: relative; height: 26px; background: #efe8da; border-radius: 5px; cursor: pointer; }
+  .seg { position: absolute; top: 3px; bottom: 3px; background: var(--c); border-radius: 3px; opacity: .85; }
+  .seg.active { opacity: 1; box-shadow: 0 0 0 2px var(--navy); }
+  .playhead { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--red); pointer-events: none; }
+  .axis { display: grid; grid-template-columns: 170px 1fr; gap: 10px; font-size: 12px; color: var(--muted); }
+  .axis div:last-child { display: flex; justify-content: space-between; }
+
+  .grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 16px; }
+  @media (max-width: 820px) {
+    .grid { grid-template-columns: 1fr; }
+    .lane, .axis { grid-template-columns: 110px 1fr; }
+  }
+  .transcript { max-height: 460px; overflow: auto; }
+  .line { display: grid; grid-template-columns: 56px 1fr; gap: 10px; padding: 7px 8px; border-radius: 6px; cursor: pointer; }
+  .line:hover { background: #f3ede1; }
+  .line.active { background: #e6f5ff; }
+  .line time { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; padding-top: 1px; }
+  .who { font-weight: 700; color: var(--c); margin-right: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--c); margin-right: 6px; }
+  .beleg { color: var(--muted); font-style: italic; }
+  .beleg button { padding: 1px 6px; font-size: 12px; margin-left: 4px; }
+  .times { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .times b { color: var(--ink); }
+  pre { background: #0b1628; color: #d7e3f4; padding: 12px; border-radius: 8px; overflow: auto; max-height: 360px; font-size: 12px; }
+  footer { font-size: 13px; color: var(--muted); padding: 0 0 32px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge"><b>AI</b> local · Ausgabe 04</span>
+    <h1>Wer hat was gesagt?</h1>
+    <p>Aufnahme rein, Protokoll raus. <strong>Nemotron 3 Diarization</strong> erkennt, wer wann spricht,
+      <strong>Qwen3-ASR</strong> schreibt mit, ein lokales Sprachmodell macht daraus Aufgaben.
+      Alles läuft auf diesem Rechner, nichts geht ins Netz.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card" aria-labelledby="h-input">
+    <h2 id="h-input"><span class="step">1</span>Aufnahme einspielen</h2>
+    <div class="row">
+      <div class="row" id="demos" role="group" aria-label="Demo-Besprechungen"></div>
+      <div class="drop" id="drop" tabindex="0" role="button" aria-label="Eigene Audiodatei wählen">
+        Eigene Datei hierher ziehen oder <u>auswählen</u> (WAV, MP3, M4A …)
+        <input type="file" id="file" accept="audio/*,video/*" class="hidden">
+      </div>
+    </div>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+    <p class="note" id="hinweis"></p>
+  </section>
+
+  <section class="card hidden" id="result" aria-labelledby="h-timeline">
+    <h2 id="h-timeline"><span class="step">2</span>Wer spricht wann · Namen vergeben</h2>
+    <audio id="player" controls preload="auto"></audio>
+    <div class="timeline" id="timeline"></div>
+    <div class="axis"><div></div><div id="axis"></div></div>
+    <div class="times" id="times"></div>
+  </section>
+
+  <div class="grid hidden" id="details">
+    <section class="card" aria-labelledby="h-transcript">
+      <h2 id="h-transcript"><span class="step">3</span>Transkript mit Sprechern</h2>
+      <div class="transcript" id="transcript"></div>
+      <div class="row" style="margin-top:12px">
+        <button class="ghost" id="dl-txt">Als TXT</button>
+        <button class="ghost" id="dl-srt">Als SRT</button>
+        <button class="ghost" id="dl-json">Rohdaten JSON</button>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="h-stats">
+      <h2 id="h-stats">Überblick</h2>
+      <table id="stats"></table>
+      <p class="note">Redeanteile zeigen wir nur, weil die Demo mit fiktiven Stimmen arbeitet.
+        Im Betrieb ist eine solche Auswertung pro Person ein Thema für Datenschutz und Betriebsrat.</p>
+      <details style="margin-top:10px"><summary>Rohausgabe der Diarization</summary><pre id="raw"></pre></details>
+    </section>
+  </div>
+
+  <section class="card hidden" id="protocol-card" aria-labelledby="h-protocol">
+    <h2 id="h-protocol"><span class="step">4</span>Protokoll mit Aufgaben</h2>
+    <div class="row">
+      <button id="make-protocol">Protokoll lokal erstellen</button>
+      <span class="note" style="margin:0">Qwen3.8 27B in LM Studio · jede Aufgabe mit Belegzitat zum Nachhören</span>
+    </div>
+    <div class="status" id="p-status" role="status" aria-live="polite"></div>
+    <div id="protocol"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  Demo zu Local AI · KI, die das Haus nicht verlässt. Ergebnisse sind Entwürfe und müssen geprüft werden.
+</footer>
+
+<script>
+const DEMO_LABELS = {
+  "supertonic": "Demo: vier klare Stimmen",
+  "supertonic-aehnlich": "Demo: ähnliche Stimmen",
+  "macos": "Demo: macOS-Stimmen (Stresstest)",
+};
+const $ = (id) => document.getElementById(id);
+let data = null;
+const names = {};
+
+const color = (sp) => `var(--s${parseInt(sp.split("_").pop(), 10) % 8})`;
+const nameOf = (sp) => names[sp] || `Sprecher ${parseInt(sp.split("_").pop(), 10) + 1}`;
+const stamp = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${(s % 60).toFixed(1).padStart(4, "0")}`;
+const el = (tag, props = {}, ...kids) => {
+  const n = Object.assign(document.createElement(tag), props);
+  for (const k of kids) n.append(k);
+  return n;
+};
+
+function setStatus(target, text, kind) {
+  target.className = "status" + (kind === "error" ? " error" : "");
+  target.replaceChildren();
+  if (kind === "busy") target.append(el("span", { className: "spinner" }));
+  target.append(text);
+}
+
+async function loadDemos() {
+  const r = await fetch("/api/demos");
+  const info = await r.json();
+  $("hinweis").textContent = `${info.titel}. ${info.hinweis}`;
+  for (const d of info.demos) {
+    const b = el("button", { className: "ghost", textContent: DEMO_LABELS[d] || d });
+    b.onclick = () => analyze({ demo: d });
+    $("demos").append(b);
+  }
+}
+
+async function analyze({ demo, file }) {
+  document.querySelectorAll("#demos button").forEach((b) => (b.disabled = true));
+  setStatus($("status"), "Läuft lokal: erst Diarization, dann Spracherkennung …", "busy");
+  const t0 = performance.now();
+  try {
+    const r = await fetch("/api/analyze", {
+      method: "POST",
+      headers: demo ? { "X-Demo": demo } : { "X-Filename": file.name },
+      body: demo ? "" : file,
+    });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.fehler || r.statusText);
+    data = j;
+    for (const k of Object.keys(names)) delete names[k];
+    setStatus($("status"), `Fertig nach ${((performance.now() - t0) / 1000).toFixed(1)} s: ${j.sprecher.length} Stimmen, ${j.segmente.length} Abschnitte, ${stamp(j.dauer_s)} Audio.`);
+    render();
+  } catch (e) {
+    setStatus($("status"), `Fehler: ${e.message}`, "error");
+  } finally {
+    document.querySelectorAll("#demos button").forEach((b) => (b.disabled = false));
+  }
+}
+
+function render() {
+  ["result", "details", "protocol-card"].forEach((id) => $(id).classList.remove("hidden"));
+  $("player").src = data.audio_url;
+  $("protocol").replaceChildren();
+  $("p-status").replaceChildren();
+
+  const tl = $("timeline");
+  tl.replaceChildren();
+  for (const sp of data.sprecher) {
+    const input = el("input", { value: "", placeholder: nameOf(sp), ariaLabel: `Name für ${nameOf(sp)}` });
+    input.style.setProperty("--c", color(sp));
+    input.oninput = () => { names[sp] = input.value.trim(); refreshNames(); };
+    const track = el("div", { className: "track" });
+    track.onclick = (ev) => {
+      const box = track.getBoundingClientRect();
+      seek(((ev.clientX - box.left) / box.width) * data.dauer_s);
+    };
+    data.segmente.forEach((s, i) => {
+      if (s.speaker !== sp) return;
+      const seg = el("div", { className: "seg", title: `${stamp(s.start)} ${s.text}` });
+      seg.dataset.i = i;
+      seg.style.setProperty("--c", color(sp));
+      seg.style.left = `${(s.start / data.dauer_s) * 100}%`;
+      seg.style.width = `${Math.max(0.3, ((s.end - s.start) / data.dauer_s) * 100)}%`;
+      track.append(seg);
+    });
+    track.append(el("div", { className: "playhead" }));
+    tl.append(el("div", { className: "lane" }, input, track));
+  }
+  const ax = $("axis");
+  ax.replaceChildren(...[0, 0.25, 0.5, 0.75, 1].map((f) => el("span", { textContent: stamp(f * data.dauer_s) })));
+
+  const z = data.zeiten_s;
+  $("times").replaceChildren(
+    el("span", {}, "Diarization ", el("b", { textContent: `${z.diarization_inkl_laden} s` })),
+    el("span", {}, "Spracherkennung ", el("b", { textContent: `${z.spracherkennung_inkl_laden} s` })),
+    el("span", {}, "jeweils inklusive Modellladen · ", el("b", { textContent: data.modelle.laufzeit })),
+  );
+  $("raw").textContent = JSON.stringify(data.segmente.map(({ speaker, start, end, confidence }) => ({ speaker, start, end, confidence })), null, 1);
+  refreshNames();
+}
+
+function refreshNames() {
+  const tr = $("transcript");
+  tr.replaceChildren();
+  data.segmente.forEach((s, i) => {
+    const who = el("span", { className: "who", textContent: nameOf(s.speaker) });
+    who.style.setProperty("--c", color(s.speaker));
+    const line = el("div", { className: "line" }, el("time", { textContent: stamp(s.start) }), el("div", {}, who, s.text));
+    line.dataset.i = i;
+    line.onclick = () => seek(s.start);
+    tr.append(line);
+  });
+  const rows = [el("tr", {}, el("th", { textContent: "Stimme" }), el("th", { textContent: "Beiträge" }), el("th", { textContent: "Sek." }), el("th", { textContent: "Wörter" }))];
+  for (const sp of data.sprecher) {
+    const st = data.statistik[sp];
+    const dot = el("span", { className: "dot" });
+    dot.style.setProperty("--c", color(sp));
+    rows.push(el("tr", {}, el("td", {}, dot, nameOf(sp)), el("td", { className: "num", textContent: st.beitraege }),
+      el("td", { className: "num", textContent: st.sekunden }), el("td", { className: "num", textContent: st.woerter })));
+  }
+  $("stats").replaceChildren(...rows);
+}
+
+function seek(t) {
+  const p = $("player");
+  p.currentTime = Math.max(0, t);
+  p.play();
+}
+
+$("player").ontimeupdate = () => {
+  if (!data) return;
+  const t = $("player").currentTime;
+  document.querySelectorAll(".playhead").forEach((ph) => (ph.style.left = `${(t / data.dauer_s) * 100}%`));
+  const active = data.segmente.findIndex((s) => t >= s.start && t <= s.end);
+  document.querySelectorAll(".seg, .line").forEach((n) => n.classList.toggle("active", Number(n.dataset.i) === active));
+  const line = document.querySelector(`.line[data-i="${active}"]`);
+  if (line) line.scrollIntoView({ block: "nearest", behavior: "smooth" });
+};
+
+async function makeProtocol() {
+  $("make-protocol").disabled = true;
+  setStatus($("p-status"), "Das lokale Sprachmodell liest das Transkript …", "busy");
+  try {
+    const r = await fetch("/api/protocol", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ job: data.job, names: Object.fromEntries(data.sprecher.map((sp) => [sp, nameOf(sp)])) }),
+    });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.fehler || r.statusText);
+    setStatus($("p-status"), `Fertig nach ${j.sekunden} s mit ${j.modell}. Bitte gegen die Belege prüfen.`);
+    const p = j.protokoll;
+    const box = $("protocol");
+    box.replaceChildren();
+    if (p.themen?.length) box.append(el("p", {}, el("b", { textContent: "Themen: " }), p.themen.join(" · ")));
+    const rows = [el("tr", {}, ...["Wer", "Was", "Bis", "Beleg"].map((h) => el("th", { textContent: h })))];
+    for (const a of p.aufgaben || []) {
+      const [m, s] = String(a.zeit || "0:0").split(":");
+      const at = Number(m) * 60 + Number(s);
+      const jump = el("button", { className: "ghost", textContent: `▶ ${a.zeit || ""}` });
+      jump.onclick = () => seek(isFinite(at) ? at : 0);
+      rows.push(el("tr", {}, el("td", { textContent: a.wer }), el("td", { textContent: a.was }), el("td", { textContent: a.bis || "–" }),
+        el("td", { className: "beleg" }, `„${a.beleg || ""}“`, jump)));
+    }
+    box.append(el("table", {}, ...rows));
+    if (p.offene_fragen?.length) box.append(el("p", {}, el("b", { textContent: "Offene Fragen: " }), p.offene_fragen.join(" · ")));
+  } catch (e) {
+    setStatus($("p-status"), `Fehler: ${e.message}`, "error");
+  } finally {
+    $("make-protocol").disabled = false;
+  }
+}
+
+function download(name, text, type) {
+  const a = el("a", { href: URL.createObjectURL(new Blob([text], { type })), download: name });
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+const srtTime = (s) => {
+  const ms = Math.round(s * 1000);
+  const p = (n, w = 2) => String(n).padStart(w, "0");
+  return `${p(Math.floor(ms / 3600000))}:${p(Math.floor(ms / 60000) % 60)}:${p(Math.floor(ms / 1000) % 60)},${p(ms % 1000, 3)}`;
+};
+$("dl-txt").onclick = () => download("transkript.txt", data.segmente.map((s) => `[${stamp(s.start)}] ${nameOf(s.speaker)}: ${s.text}`).join("\n"), "text/plain");
+$("dl-srt").onclick = () => download("transkript.srt", data.segmente.map((s, i) => `${i + 1}\n${srtTime(s.start)} --> ${srtTime(s.end)}\n${nameOf(s.speaker)}: ${s.text}\n`).join("\n"), "text/plain");
+$("dl-json").onclick = () => download("transkript.json", JSON.stringify({ ...data, namen: names }, null, 1), "application/json");
+$("make-protocol").onclick = makeProtocol;
+
+const drop = $("drop");
+drop.onclick = () => $("file").click();
+drop.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); $("file").click(); } };
+$("file").onchange = () => $("file").files[0] && analyze({ file: $("file").files[0] });
+drop.ondragover = (e) => { e.preventDefault(); drop.classList.add("over"); };
+drop.ondragleave = () => drop.classList.remove("over");
+drop.ondrop = (e) => { e.preventDefault(); drop.classList.remove("over"); if (e.dataTransfer.files[0]) analyze({ file: e.dataTransfer.files[0] }); };
+
+loadDemos();
+</script>
+</body>
+</html>

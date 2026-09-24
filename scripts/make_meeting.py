@@ -9,8 +9,9 @@ Zwei Stimmsätze, beide synthetisch:
   macos       macOS-Systemstimmen (Anna, Reed, Shelley, Eddy); die beiden Männerstimmen
               stammen aus derselben Synthese und klingen sehr ähnlich (Stresstest)
   supertonic  Supertonic 3 über audio.cpp, neuronale Stimmen F1, M2, F3, M4
+  supertonic_aehnlich  dieselbe Synthese mit den benachbarten Stimmen F1, M1, F2, M2
 
-Aufruf:  uv run --with numpy python scripts/make_meeting.py --engine macos|supertonic
+Aufruf:  uv run --with numpy python scripts/make_meeting.py --engine macos|supertonic|supertonic_aehnlich
 """
 
 import argparse
@@ -63,9 +64,9 @@ def trim(pcm: np.ndarray) -> np.ndarray:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--engine", choices=["macos", "supertonic"], required=True)
+    ap.add_argument("--engine", choices=["macos", "supertonic", "supertonic_aehnlich"], required=True)
     engine = ap.parse_args().engine
-    name = f"besprechung-{engine}"
+    name = f"besprechung-{engine.replace('_', '-')}"
     spec = json.loads((FIXTURES / "besprechung.json").read_text())
     speakers = spec["sprecher"]
     gap = spec["abstand_standard_s"]

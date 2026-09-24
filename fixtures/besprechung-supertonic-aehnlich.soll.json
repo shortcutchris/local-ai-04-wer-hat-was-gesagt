@@ -1,0 +1,176 @@
+{
+ "engine": "supertonic_aehnlich",
+ "audio": "fixtures/besprechung-supertonic-aehnlich.wav",
+ "dauer_s": 83.3,
+ "ueberlappung_s": 2.67,
+ "segmente": [
+  {
+   "id": 1,
+   "sprecher": "petra",
+   "start": 0.5,
+   "end": 8.09,
+   "text": "Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+  },
+  {
+   "id": 2,
+   "sprecher": "jonas",
+   "start": 8.54,
+   "end": 14.66,
+   "text": "Zu Brenner: Der Stahl für die Einsätze kommt erst am Donnerstag. Unser Lieferant hat gestern abgesagt."
+  },
+  {
+   "id": 3,
+   "sprecher": "tobias",
+   "start": 15.11,
+   "end": 19.83,
+   "text": "Donnerstag ist zu spät. Brenner wartet seit zwei Wochen und hat schon zweimal angerufen."
+  },
+  {
+   "id": 4,
+   "sprecher": "petra",
+   "start": 20.28,
+   "end": 22.93,
+   "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen?"
+  },
+  {
+   "id": 5,
+   "sprecher": "jonas",
+   "start": 23.38,
+   "end": 27.82,
+   "text": "Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag."
+  },
+  {
+   "id": 6,
+   "sprecher": "tobias",
+   "start": 27.22,
+   "end": 30.07,
+   "text": "Und ich rufe Brenner heute an und sage ihm den neuen Stand."
+  },
+  {
+   "id": 7,
+   "sprecher": "miriam",
+   "start": 30.52,
+   "end": 36.71,
+   "text": "Moment, bevor du anrufst: Wir wissen noch nicht, ob Kübler liefern kann. Sag ihm lieber erst Mittwoch einen Termin."
+  },
+  {
+   "id": 8,
+   "sprecher": "tobias",
+   "start": 37.16,
+   "end": 39.42,
+   "text": "Gut, dann rufe ich Brenner am Mittwochnachmittag an."
+  },
+  {
+   "id": 9,
+   "sprecher": "petra",
+   "start": 39.87,
+   "end": 41.76,
+   "text": "Dann zur Reklamation Seidel. Miriam?"
+  },
+  {
+   "id": 10,
+   "sprecher": "miriam",
+   "start": 42.21,
+   "end": 47.26,
+   "text": "Bei zwölf von zweihundert Teilen ist die Bohrung zu groß. Ich vermute das Werkzeug an Maschine vier."
+  },
+  {
+   "id": 11,
+   "sprecher": "petra",
+   "start": 46.46,
+   "end": 47.71,
+   "text": "Zwölf Teile, das ist viel."
+  },
+  {
+   "id": 12,
+   "sprecher": "miriam",
+   "start": 48.16,
+   "end": 51.75,
+   "text": "Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag."
+  },
+  {
+   "id": 13,
+   "sprecher": "jonas",
+   "start": 52.2,
+   "end": 53.85,
+   "text": "Soll ich schon Ersatzwerkzeug bestellen?"
+  },
+  {
+   "id": 14,
+   "sprecher": "miriam",
+   "start": 54.3,
+   "end": 55.99,
+   "text": "Nein, noch nicht. Erst nach der Prüfung."
+  },
+  {
+   "id": 15,
+   "sprecher": "tobias",
+   "start": 56.44,
+   "end": 60.08,
+   "text": "Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind."
+  },
+  {
+   "id": 16,
+   "sprecher": "petra",
+   "start": 60.53,
+   "end": 64.36,
+   "text": "Letzter Punkt, die Messe. Tobias, du wolltest die Standfläche buchen."
+  },
+  {
+   "id": 17,
+   "sprecher": "tobias",
+   "start": 64.81,
+   "end": 67.86,
+   "text": "Das schaffe ich diese Woche nicht mehr. Kann das jemand übernehmen?"
+  },
+  {
+   "id": 18,
+   "sprecher": "petra",
+   "start": 67.36,
+   "end": 67.91,
+   "text": "Ich mache das."
+  },
+  {
+   "id": 19,
+   "sprecher": "jonas",
+   "start": 67.66,
+   "end": 68.25,
+   "text": "Ich kann auch."
+  },
+  {
+   "id": 20,
+   "sprecher": "petra",
+   "start": 68.7,
+   "end": 72.08,
+   "text": "Nein, lass nur, Jonas. Ich buche die Fläche bis Freitag."
+  },
+  {
+   "id": 21,
+   "sprecher": "miriam",
+   "start": 72.53,
+   "end": 78.66,
+   "text": "Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie. Die stelle ich bis zum fünfzehnten Oktober bereit."
+  },
+  {
+   "id": 22,
+   "sprecher": "petra",
+   "start": 79.11,
+   "end": 81.98,
+   "text": "Gut. Dann sehen wir uns nächsten Montag. Danke euch."
+  },
+  {
+   "id": 23,
+   "sprecher": "jonas",
+   "start": 81.68,
+   "end": 82.0,
+   "text": "Danke."
+  },
+  {
+   "id": 24,
+   "sprecher": "tobias",
+   "start": 81.98,
+   "end": 82.5,
+   "text": "Bis Montag."
+  }
+ ]
+}

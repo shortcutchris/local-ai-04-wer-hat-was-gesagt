@@ -6,3 +6,4 @@ jobs/
 __pycache__/
 .DS_Store
 .venv/
+downloads/

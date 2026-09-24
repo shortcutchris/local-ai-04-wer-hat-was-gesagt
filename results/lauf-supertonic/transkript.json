@@ -1,0 +1,211 @@
+{
+ "quelle": "besprechung-supertonic.wav",
+ "dauer_s": 87.22,
+ "sprecher": [
+  "speaker_0",
+  "speaker_1",
+  "speaker_2",
+  "speaker_3"
+ ],
+ "segmente": [
+  {
+   "speaker": "speaker_0",
+   "start": 0.46,
+   "end": 8.1,
+   "confidence": 0.976433,
+   "text": "Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 8.5,
+   "end": 14.6,
+   "confidence": 0.985843,
+   "text": "Zu Brenner, der Stahl für die Einsätze kommt erst am Donnerstag. Unser Lieferant hat gestern abgesagt."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 15.0,
+   "end": 19.74,
+   "confidence": 0.996693,
+   "text": "Donnerstag ist zu spät. Brenner wartet seit zwei Wochen und hat schon zweimal angerufen."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 20.14,
+   "end": 22.84,
+   "confidence": 0.9912,
+   "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen"
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 23.24,
+   "end": 27.66,
+   "confidence": 0.972754,
+   "text": "Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 26.97,
+   "end": 29.62,
+   "confidence": 0.994613,
+   "text": "Und ich rufe Brenner heute an und sage ihm den neuen Stand."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 30.01,
+   "end": 37.27,
+   "confidence": 0.971967,
+   "text": "Moment, bevor du anruft, wir wissen noch nicht, ob Kübler liefern kann. Sag ihm lieber erst Mittwoch einen Termin."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 37.67,
+   "end": 40.05,
+   "confidence": 0.987432,
+   "text": "Gut, dann rufe ich Brenner am Mittwoch Nachmittag an."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 40.45,
+   "end": 42.37,
+   "confidence": 0.889483,
+   "text": "Dann zur Reklamationseidel Miriam."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 42.78,
+   "end": 48.84,
+   "confidence": 0.980295,
+   "text": "Bei zwölf von zweihundert Teilen ist die Bohrung zu groß. Ich vermute, das Werkzeug an Maschinen vier."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 48.04,
+   "end": 49.28,
+   "confidence": 0.972366,
+   "text": "zwölf Teile, das ist viel."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 49.69,
+   "end": 54.23,
+   "confidence": 0.987652,
+   "text": "Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 54.62,
+   "end": 56.24,
+   "confidence": 0.977979,
+   "text": "Soll ich schon Ersatzwerkzeug bestellen"
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 56.64,
+   "end": 58.9,
+   "confidence": 0.976986,
+   "text": "Nein, noch nicht, erst nach Prüfung."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 59.31,
+   "end": 63.0,
+   "confidence": 0.993979,
+   "text": "Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 63.37,
+   "end": 67.26,
+   "confidence": 0.97152,
+   "text": "Letzter Punkt: Die Messe. Tobias, du wolltest die Standfläche buchen."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 67.66,
+   "end": 70.69,
+   "confidence": 0.975873,
+   "text": "Das schaffe ich diese Woche nicht mehr. Kann das jemand übernehmen?"
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 70.22,
+   "end": 70.83,
+   "confidence": 0.964864,
+   "text": "Ich mache das."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 70.5,
+   "end": 71.03,
+   "confidence": 0.954564,
+   "text": "Ich kann auch."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 71.43,
+   "end": 74.87,
+   "confidence": 0.988705,
+   "text": "Nein, lass nur Jonas. Ich buche die Fläche bis Freitag."
+  },
+  {
+   "speaker": "speaker_3",
+   "start": 75.26,
+   "end": 82.54,
+   "confidence": 0.99079,
+   "text": "Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie, die stelle ich bis zum fünfzehnten Oktober bereit."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 82.92,
+   "end": 85.84,
+   "confidence": 0.920996,
+   "text": "Gut, dann sehen wir uns nächsten Montag. Danke euch."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 85.5,
+   "end": 85.91,
+   "confidence": 0.933536,
+   "text": "Danke"
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 85.75,
+   "end": 86.46,
+   "confidence": 0.968722,
+   "text": "Und bis Montag."
+  }
+ ],
+ "statistik": {
+  "speaker_0": {
+   "beitraege": 8,
+   "sekunden": 24.4,
+   "woerter": 68
+  },
+  "speaker_1": {
+   "beitraege": 5,
+   "sekunden": 13.1,
+   "woerter": 40
+  },
+  "speaker_2": {
+   "beitraege": 6,
+   "sekunden": 17.2,
+   "woerter": 60
+  },
+  "speaker_3": {
+   "beitraege": 5,
+   "sekunden": 27.4,
+   "woerter": 74
+  }
+ },
+ "zeiten_s": {
+  "diarization_inkl_laden": 1.07,
+  "spracherkennung_inkl_laden": 12.06
+ },
+ "modelle": {
+  "diarization": "nvidia/Nemotron-3-Diarization (audio.cpp GGUF bf16)",
+  "asr": "Qwen3-ASR-0.6B (GGUF q8_0)",
+  "laufzeit": "audio.cpp 0.8.2, Metal"
+ }
+}

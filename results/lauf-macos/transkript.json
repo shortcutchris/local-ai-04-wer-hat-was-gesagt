@@ -1,0 +1,177 @@
+{
+ "quelle": "besprechung-macos.wav",
+ "dauer_s": 104.49,
+ "sprecher": [
+  "speaker_0",
+  "speaker_1",
+  "speaker_2"
+ ],
+ "segmente": [
+  {
+   "speaker": "speaker_0",
+   "start": 0.46,
+   "end": 8.29,
+   "confidence": 0.993377,
+   "text": "Guten Morgen zusammen. Drei Punkte heute: Der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 8.71,
+   "end": 22.42,
+   "confidence": 0.909959,
+   "text": "Zubrina, der Staufer Diänes, kommt aus dem Donostayg, und sein Lieferant ist ein Abgezigt. Donostayg ist zu spät. Brenowalt hat sie zu Weichern und hat schon zu Weimall gerufen."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 22.84,
+   "end": 26.45,
+   "confidence": 0.981503,
+   "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen"
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 26.88,
+   "end": 35.47,
+   "confidence": 0.691646,
+   "text": "Ja, machtsch. Ich frage dich, nicht bei Kubler und Smelt, mit Bismuth und Mithet. Und ich frage dich, und sage ihm, denn du verstehst."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 35.92,
+   "end": 44.32,
+   "confidence": 0.584077,
+   "text": "Moment, bewege an Rost, wohin der Not nicht obkubler Lifen kann, sage im Liberas mit, was ich ein Termin"
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 44.76,
+   "end": 47.98,
+   "confidence": 0.554198,
+   "text": "Gut, dann ruft ich Reda um mit Watchnits mitzagen."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 48.42,
+   "end": 51.11,
+   "confidence": 0.953166,
+   "text": "Dann soll Reklamation seidel, Miriam."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 51.52,
+   "end": 58.22,
+   "confidence": 0.61253,
+   "text": "Base Waffen wird unterteilt in Stabilisierungsklasse, ich wenn du darfst, Werkzeug und Maschinengewehr"
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 57.41,
+   "end": 59.21,
+   "confidence": 0.96919,
+   "text": "Drei Teile, das ist viel."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 59.61,
+   "end": 64.23,
+   "confidence": 0.746137,
+   "text": "Each proof does work zubooten through unshimmed and proof registry tag."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 64.65,
+   "end": 67.08,
+   "confidence": 0.862561,
+   "text": "Soll ich schon als Werkzeug bestellen"
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 67.51,
+   "end": 70.63,
+   "confidence": 0.721417,
+   "text": "9. Notch neck ist nach der Prüfung."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 71.06,
+   "end": 75.64,
+   "confidence": 0.902611,
+   "text": "It shrieks idle utine perswishing melding. Does wordman sign"
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 76.05,
+   "end": 80.67,
+   "confidence": 0.966622,
+   "text": "Letzter Punkt, die Messe Tobias, du wolltest die Standfläche buchen."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 81.08,
+   "end": 86.0,
+   "confidence": 0.915523,
+   "text": "Das Schaf ist dieswo schnick mir, kann das jemand tun? Ich mache das."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 84.71,
+   "end": 85.55,
+   "confidence": 0.968756,
+   "text": "Ich mache das."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 86.42,
+   "end": 90.44,
+   "confidence": 0.978532,
+   "text": "Nein, lass nur, Jonas. Ich buche die Fläche bis Freitag."
+  },
+  {
+   "speaker": "speaker_2",
+   "start": 90.84,
+   "end": 98.68,
+   "confidence": 0.89878,
+   "text": "Wer brouchet für die Messungen musste ein Losternieur sein. Die Stelle ist zum 19. Oktober beerdigt."
+  },
+  {
+   "speaker": "speaker_0",
+   "start": 99.16,
+   "end": 103.04,
+   "confidence": 0.973563,
+   "text": "Gut, dann sehen wir uns nächsten Montag. Danke euch."
+  },
+  {
+   "speaker": "speaker_1",
+   "start": 102.52,
+   "end": 103.69,
+   "confidence": 0.903038,
+   "text": "Das Modtag"
+  }
+ ],
+ "statistik": {
+  "speaker_0": {
+   "beitraege": 8,
+   "sekunden": 29.3,
+   "woerter": 69
+  },
+  "speaker_1": {
+   "beitraege": 7,
+   "sekunden": 38.6,
+   "woerter": 92
+  },
+  "speaker_2": {
+   "beitraege": 5,
+   "sekunden": 30.7,
+   "woerter": 66
+  }
+ },
+ "zeiten_s": {
+  "diarization_inkl_laden": 0.56,
+  "spracherkennung_inkl_laden": 13.02
+ },
+ "modelle": {
+  "diarization": "nvidia/Nemotron-3-Diarization (audio.cpp GGUF bf16)",
+  "asr": "Qwen3-ASR-0.6B (GGUF q8_0)",
+  "laufzeit": "audio.cpp 0.8.2, Metal"
+ }
+}

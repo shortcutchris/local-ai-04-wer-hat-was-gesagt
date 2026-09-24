@@ -1,0 +1,74 @@
+{
+ "richtig_zugeordnet": 6,
+ "erwartet": 7,
+ "termin_richtig": 6,
+ "falsche_person": 1,
+ "fehlend": 0,
+ "zusaetzlich": [],
+ "verworfene_aufgabe_aufgenommen": [],
+ "zeilen": [
+  {
+   "erwartet": "Beim zweiten Lieferanten Kübler Stahl anfragen, Rückmeldung",
+   "soll": "jonas",
+   "ist": "jonas",
+   "soll_bis": "Mittwochmittag",
+   "bis": "Mittwochmittag",
+   "richtig": true,
+   "termin_richtig": true
+  },
+  {
+   "erwartet": "Brenner anrufen und neuen Liefertermin nennen",
+   "soll": "tobias",
+   "ist": "tobias",
+   "soll_bis": "Mittwochnachmittag",
+   "bis": "Mittwoch Nachmittag",
+   "richtig": true,
+   "termin_richtig": true
+  },
+  {
+   "erwartet": "Werkzeug an Maschine vier prüfen",
+   "soll": "miriam",
+   "ist": "miriam",
+   "soll_bis": "morgen früh",
+   "bis": "Freitag",
+   "richtig": true,
+   "termin_richtig": false
+  },
+  {
+   "erwartet": "Prüfbericht Reklamation Seidel",
+   "soll": "miriam",
+   "ist": "miriam",
+   "soll_bis": "Freitag",
+   "bis": "Freitag",
+   "richtig": true,
+   "termin_richtig": true
+  },
+  {
+   "erwartet": "Zwischenmeldung an Seidel",
+   "soll": "tobias",
+   "ist": "tobias",
+   "soll_bis": "heute",
+   "bis": "heute",
+   "richtig": true,
+   "termin_richtig": true
+  },
+  {
+   "erwartet": "Standfläche Messe Stuttgart buchen",
+   "soll": "petra",
+   "ist": "jonas",
+   "soll_bis": "Freitag",
+   "bis": "Freitag",
+   "richtig": false,
+   "termin_richtig": true
+  },
+  {
+   "erwartet": "Zwei Musterteile der neuen Serie für die Messe bereitstellen",
+   "soll": "miriam",
+   "ist": "miriam",
+   "soll_bis": "15. Oktober",
+   "bis": "15. Oktober",
+   "richtig": true,
+   "termin_richtig": true
+  }
+ ]
+}
