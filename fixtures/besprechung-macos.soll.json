@@ -1,0 +1,176 @@
+{
+ "engine": "macos",
+ "audio": "fixtures/besprechung-macos.wav",
+ "dauer_s": 104.49,
+ "ueberlappung_s": 3.11,
+ "segmente": [
+  {
+   "id": 1,
+   "sprecher": "petra",
+   "start": 0.5,
+   "end": 8.28,
+   "text": "Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+  },
+  {
+   "id": 2,
+   "sprecher": "jonas",
+   "start": 8.73,
+   "end": 15.98,
+   "text": "Zu Brenner: Der Stahl für die Einsätze kommt erst am Donnerstag. Unser Lieferant hat gestern abgesagt."
+  },
+  {
+   "id": 3,
+   "sprecher": "tobias",
+   "start": 16.43,
+   "end": 22.42,
+   "text": "Donnerstag ist zu spät. Brenner wartet seit zwei Wochen und hat schon zweimal angerufen."
+  },
+  {
+   "id": 4,
+   "sprecher": "petra",
+   "start": 22.87,
+   "end": 26.45,
+   "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen?"
+  },
+  {
+   "id": 5,
+   "sprecher": "jonas",
+   "start": 26.9,
+   "end": 32.68,
+   "text": "Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag."
+  },
+  {
+   "id": 6,
+   "sprecher": "tobias",
+   "start": 32.08,
+   "end": 35.5,
+   "text": "Und ich rufe Brenner heute an und sage ihm den neuen Stand."
+  },
+  {
+   "id": 7,
+   "sprecher": "miriam",
+   "start": 35.95,
+   "end": 44.34,
+   "text": "Moment, bevor du anrufst: Wir wissen noch nicht, ob Kübler liefern kann. Sag ihm lieber erst Mittwoch einen Termin."
+  },
+  {
+   "id": 8,
+   "sprecher": "tobias",
+   "start": 44.79,
+   "end": 48.0,
+   "text": "Gut, dann rufe ich Brenner am Mittwochnachmittag an."
+  },
+  {
+   "id": 9,
+   "sprecher": "petra",
+   "start": 48.45,
+   "end": 51.11,
+   "text": "Dann zur Reklamation Seidel. Miriam?"
+  },
+  {
+   "id": 10,
+   "sprecher": "miriam",
+   "start": 51.56,
+   "end": 58.24,
+   "text": "Bei zwölf von zweihundert Teilen ist die Bohrung zu groß. Ich vermute das Werkzeug an Maschine vier."
+  },
+  {
+   "id": 11,
+   "sprecher": "petra",
+   "start": 57.44,
+   "end": 59.2,
+   "text": "Zwölf Teile, das ist viel."
+  },
+  {
+   "id": 12,
+   "sprecher": "miriam",
+   "start": 59.65,
+   "end": 64.23,
+   "text": "Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag."
+  },
+  {
+   "id": 13,
+   "sprecher": "jonas",
+   "start": 64.68,
+   "end": 67.09,
+   "text": "Soll ich schon Ersatzwerkzeug bestellen?"
+  },
+  {
+   "id": 14,
+   "sprecher": "miriam",
+   "start": 67.54,
+   "end": 70.65,
+   "text": "Nein, noch nicht. Erst nach der Prüfung."
+  },
+  {
+   "id": 15,
+   "sprecher": "tobias",
+   "start": 71.1,
+   "end": 75.64,
+   "text": "Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind."
+  },
+  {
+   "id": 16,
+   "sprecher": "petra",
+   "start": 76.09,
+   "end": 80.67,
+   "text": "Letzter Punkt, die Messe. Tobias, du wolltest die Standfläche buchen."
+  },
+  {
+   "id": 17,
+   "sprecher": "tobias",
+   "start": 81.12,
+   "end": 85.24,
+   "text": "Das schaffe ich diese Woche nicht mehr. Kann das jemand übernehmen?"
+  },
+  {
+   "id": 18,
+   "sprecher": "petra",
+   "start": 84.74,
+   "end": 85.54,
+   "text": "Ich mache das."
+  },
+  {
+   "id": 19,
+   "sprecher": "jonas",
+   "start": 85.04,
+   "end": 86.0,
+   "text": "Ich kann auch."
+  },
+  {
+   "id": 20,
+   "sprecher": "petra",
+   "start": 86.45,
+   "end": 90.43,
+   "text": "Nein, lass nur, Jonas. Ich buche die Fläche bis Freitag."
+  },
+  {
+   "id": 21,
+   "sprecher": "miriam",
+   "start": 90.88,
+   "end": 98.72,
+   "text": "Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie. Die stelle ich bis zum fünfzehnten Oktober bereit."
+  },
+  {
+   "id": 22,
+   "sprecher": "petra",
+   "start": 99.17,
+   "end": 102.86,
+   "text": "Gut. Dann sehen wir uns nächsten Montag. Danke euch."
+  },
+  {
+   "id": 23,
+   "sprecher": "jonas",
+   "start": 102.56,
+   "end": 103.07,
+   "text": "Danke."
+  },
+  {
+   "id": 24,
+   "sprecher": "tobias",
+   "start": 102.86,
+   "end": 103.69,
+   "text": "Bis Montag."
+  }
+ ]
+}

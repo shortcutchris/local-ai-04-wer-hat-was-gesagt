@@ -1,0 +1,232 @@
+{
+  "titel": "Montagsbesprechung Hollerbach Formenbau GmbH (fiktiv)",
+  "hinweis": "Fiktive Firma, fiktive Personen, synthetische Stimmen (macOS-Systemstimmen bzw. Supertonic 3). Keine echte Aufnahme.",
+  "sprecher": {
+    "petra": {
+      "name": "Petra Lang",
+      "rolle": "Produktionsleitung",
+      "stimme_macos": "Anna",
+      "stimme_supertonic": "F1"
+    },
+    "jonas": {
+      "name": "Jonas Weber",
+      "rolle": "Einkauf",
+      "stimme_macos": "Reed",
+      "stimme_supertonic": "M2"
+    },
+    "miriam": {
+      "name": "Miriam Koch",
+      "rolle": "Qualität",
+      "stimme_macos": "Shelley",
+      "stimme_supertonic": "F3"
+    },
+    "tobias": {
+      "name": "Tobias Brandt",
+      "rolle": "Vertrieb",
+      "stimme_macos": "Eddy",
+      "stimme_supertonic": "M4"
+    }
+  },
+  "abstand_standard_s": 0.45,
+  "beitraege": [
+    {
+      "id": 1,
+      "sprecher": "petra",
+      "text": "Guten Morgen zusammen. Drei Punkte heute: der Lieferverzug bei Brenner, die Reklamation von Seidel und die Messe in Stuttgart."
+    },
+    {
+      "id": 2,
+      "sprecher": "jonas",
+      "text": "Zu Brenner: Der Stahl für die Einsätze kommt erst am Donnerstag. Unser Lieferant hat gestern abgesagt."
+    },
+    {
+      "id": 3,
+      "sprecher": "tobias",
+      "text": "Donnerstag ist zu spät. Brenner wartet seit zwei Wochen und hat schon zweimal angerufen."
+    },
+    {
+      "id": 4,
+      "sprecher": "petra",
+      "text": "Jonas, kannst du bei einem zweiten Lieferanten anfragen?"
+    },
+    {
+      "id": 5,
+      "sprecher": "jonas",
+      "text": "Ja, mache ich. Ich frage heute noch bei Kübler an und melde mich bis Mittwochmittag."
+    },
+    {
+      "id": 6,
+      "sprecher": "tobias",
+      "text": "Und ich rufe Brenner heute an und sage ihm den neuen Stand.",
+      "versatz_s": -0.6
+    },
+    {
+      "id": 7,
+      "sprecher": "miriam",
+      "text": "Moment, bevor du anrufst: Wir wissen noch nicht, ob Kübler liefern kann. Sag ihm lieber erst Mittwoch einen Termin."
+    },
+    {
+      "id": 8,
+      "sprecher": "tobias",
+      "text": "Gut, dann rufe ich Brenner am Mittwochnachmittag an."
+    },
+    {
+      "id": 9,
+      "sprecher": "petra",
+      "text": "Dann zur Reklamation Seidel. Miriam?"
+    },
+    {
+      "id": 10,
+      "sprecher": "miriam",
+      "text": "Bei zwölf von zweihundert Teilen ist die Bohrung zu groß. Ich vermute das Werkzeug an Maschine vier."
+    },
+    {
+      "id": 11,
+      "sprecher": "petra",
+      "text": "Zwölf Teile, das ist viel.",
+      "versatz_s": -0.8
+    },
+    {
+      "id": 12,
+      "sprecher": "miriam",
+      "text": "Ich prüfe das Werkzeug morgen früh und schreibe den Prüfbericht bis Freitag."
+    },
+    {
+      "id": 13,
+      "sprecher": "jonas",
+      "text": "Soll ich schon Ersatzwerkzeug bestellen?"
+    },
+    {
+      "id": 14,
+      "sprecher": "miriam",
+      "text": "Nein, noch nicht. Erst nach der Prüfung."
+    },
+    {
+      "id": 15,
+      "sprecher": "tobias",
+      "text": "Ich schreibe Seidel heute eine kurze Zwischenmeldung, dass wir dran sind."
+    },
+    {
+      "id": 16,
+      "sprecher": "petra",
+      "text": "Letzter Punkt, die Messe. Tobias, du wolltest die Standfläche buchen."
+    },
+    {
+      "id": 17,
+      "sprecher": "tobias",
+      "text": "Das schaffe ich diese Woche nicht mehr. Kann das jemand übernehmen?"
+    },
+    {
+      "id": 18,
+      "sprecher": "petra",
+      "text": "Ich mache das.",
+      "versatz_s": -0.5
+    },
+    {
+      "id": 19,
+      "sprecher": "jonas",
+      "text": "Ich kann auch.",
+      "versatz_s": -1.0
+    },
+    {
+      "id": 20,
+      "sprecher": "petra",
+      "text": "Nein, lass nur, Jonas. Ich buche die Fläche bis Freitag."
+    },
+    {
+      "id": 21,
+      "sprecher": "miriam",
+      "text": "Wir brauchen für die Messe noch zwei Musterteile aus der neuen Serie. Die stelle ich bis zum fünfzehnten Oktober bereit."
+    },
+    {
+      "id": 22,
+      "sprecher": "petra",
+      "text": "Gut. Dann sehen wir uns nächsten Montag. Danke euch."
+    },
+    {
+      "id": 23,
+      "sprecher": "jonas",
+      "text": "Danke.",
+      "versatz_s": -0.3
+    },
+    {
+      "id": 24,
+      "sprecher": "tobias",
+      "text": "Bis Montag.",
+      "versatz_s": -0.5
+    }
+  ],
+  "erwartete_aufgaben": [
+    {
+      "wer": "jonas",
+      "was": "Beim zweiten Lieferanten Kübler Stahl anfragen, Rückmeldung",
+      "bis": "Mittwochmittag",
+      "stichworte": [
+        "kübler",
+        "lieferant"
+      ]
+    },
+    {
+      "wer": "tobias",
+      "was": "Brenner anrufen und neuen Liefertermin nennen",
+      "bis": "Mittwochnachmittag",
+      "falle": "Erste Zusage 'heute anrufen' wurde nach Miriams Einwand auf Mittwoch verschoben",
+      "stichworte": [
+        "brenner"
+      ]
+    },
+    {
+      "wer": "miriam",
+      "was": "Werkzeug an Maschine vier prüfen",
+      "bis": "morgen früh",
+      "stichworte": [
+        "werkzeug"
+      ]
+    },
+    {
+      "wer": "miriam",
+      "was": "Prüfbericht Reklamation Seidel",
+      "bis": "Freitag",
+      "stichworte": [
+        "prüfbericht",
+        "bericht"
+      ]
+    },
+    {
+      "wer": "tobias",
+      "was": "Zwischenmeldung an Seidel",
+      "bis": "heute",
+      "stichworte": [
+        "zwischenmeldung",
+        "seidel"
+      ]
+    },
+    {
+      "wer": "petra",
+      "was": "Standfläche Messe Stuttgart buchen",
+      "bis": "Freitag",
+      "falle": "Ursprünglich Tobias, Jonas bietet sich überlappend an, Petra übernimmt",
+      "stichworte": [
+        "standfläche",
+        "fläche",
+        "messe"
+      ]
+    },
+    {
+      "wer": "miriam",
+      "was": "Zwei Musterteile der neuen Serie für die Messe bereitstellen",
+      "bis": "15. Oktober",
+      "stichworte": [
+        "musterteile",
+        "muster"
+      ]
+    }
+  ],
+  "keine_aufgabe": [
+    "Ersatzwerkzeug bestellen (ausdrücklich noch nicht, erst nach Prüfung)",
+    "Jonas bucht die Messefläche nicht"
+  ],
+  "keine_aufgabe_stichworte": [
+    "ersatzwerkzeug"
+  ]
+}

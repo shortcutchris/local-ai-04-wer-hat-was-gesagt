@@ -1,0 +1,8 @@
+# Laufzeit und Modelle werden per scripts/install.py geladen und per SHA256 geprüft
+runtime/
+models/
+# Arbeitsordner der Web-Oberfläche
+jobs/
+__pycache__/
+.DS_Store
+.venv/
